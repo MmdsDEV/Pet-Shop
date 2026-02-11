@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Shop Goiânia</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:url("https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=1600") center/cover no-repeat fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow-x:hidden;
+}
+
+/* CAMADA BORRADA GLOBAL */
+.blur-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  z-index:1;
+  pointer-events:none;
+}
+
+/* CONTAINER */
+.container{
+  position:relative;
+  z-index:2;
+  background:rgba(255,255,255,0.08);
+  border-radius:24px;
+  padding:60px 35px;
+  max-width:650px;
+  width:90%;
+  text-align:center;
+  color:#fff;
+  box-shadow:0 30px 80px rgba(0,0,0,0.6);
+  animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+h1{
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.highlight{
+  color:#25d366;
+}
+
+p{
+  font-size:18px;
+  margin-bottom:20px;
+  opacity:0.95;
+}
+
+.info{
+  margin-bottom:25px;
+  font-size:16px;
+  opacity:0.9;
+}
+
+/* CONTADOR */
+.counter{
+  background:rgba(37,211,102,0.15);
+  padding:12px;
+  border-radius:12px;
+  margin-bottom:25px;
+  font-weight:bold;
+}
+
+/* BOTÕES */
+.btn{
+  display:block;
+  text-decoration:none;
+  padding:18px;
+  border-radius:50px;
+  font-size:18px;
+  font-weight:bold;
+  margin:15px auto;
+  transition:0.3s;
+  width:100%;
+  max-width:380px;
+}
+
+.whatsapp{
+  background:#25d366;
+  color:#fff;
+  box-shadow:0 15px 35px rgba(37,211,102,0.5);
+}
+
+.whatsapp:hover{
+  transform:scale(1.06);
+}
+
+.location{
+  background:#ffffff;
+  color:#222;
+  box-shadow:0 15px 35px rgba(255,255,255,0.3);
+}
+
+.location:hover{
+  transform:scale(1.06);
+}
+
+/* BOTÃO FLUTUANTE */
+.float-whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#fff;
+  font-size:26px;
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  box-shadow:0 15px 40px rgba(37,211,102,0.7);
+  z-index:3;
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.12);}
+  100%{transform:scale(1);}
+}
+
+/* CACHORRO CORRENDO */
+.dog{
+  position:absolute;
+  bottom:-20px;
+  left:-120px;
+  font-size:50px;
+  animation:runDog 12s linear infinite;
+}
+
+@keyframes runDog{
+  0%{left:-120px;}
+  100%{left:110%;}
+}
+
+/* RESPONSIVO */
+@media(max-width:480px){
+  h1{font-size:30px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="blur-overlay"></div>
+
+<div class="container">
+  
+
+  <h1>Pet Shop <span class="highlight">Goiânia🐶</span></h1>
+  <p>Seu pet merece cuidado de verdade.  
+  Atendimento rápido, seguro e profissional.</p>
+
+  <div class="info">
+    Funcionamos de segunda a sábado<br>
+    das 8h às 18h
+  </div>
+
+
+
+  <a href="https://wa.me/5562999999999" class="btn whatsapp">
+    📲 Agendar Agora pelo WhatsApp
+  </a>
+
+  <a href="https://maps.google.com/?q=Pet+Shop+Goiânia" target="_blank" class="btn location">
+    📍 Ver Localização
+  </a>
+</div>
+
+<!-- BOTÃO FLUTUANTE -->
+<a href="https://wa.me/5562999999999" class="float-whatsapp">
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+
+
+</body>
+</html>
